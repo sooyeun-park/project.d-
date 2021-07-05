@@ -1,0 +1,5 @@
+#! /usr/bin/env python
+FILE = open('./test_file.txt','r')
+print(FILE.read())
+
+

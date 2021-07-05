@@ -1,0 +1,91 @@
+#! /usr/bin/env python
+
+# 1
+print("Hello, Bioinformatics")
+print('=' * 30)
+
+# 2
+r = 3
+pi = 3.14
+Area = pi*(r**2)
+print(Area)
+print('=' * 30)
+
+#3
+num1 = 3
+num2 = 5
+print(num1+num2)
+print(num1-num2)
+print(num1*num2)
+print(num1/num2)
+print(num1**num2)
+print('=' * 30)
+
+#4
+if num1 % 2 == 1:
+    print(num1, "은 홀수다.")
+else :
+    print (num1, "은 짝수다.")
+print('=' * 30)
+
+#5
+if num1 % 3 == 0 and num1 % 7 == 0 : 
+    print(num1, "은 3과 7의 배수다.")
+elif num1 % 3 == 0 : 
+    print(num1, "은 3의 배수다.")
+elif num1 % 7 == 0 : 
+    print(num1, "은 7의 배수다.")
+else : 
+    print(num1, "은 3의 배수도, 7의 배수도 아니다.")
+print('=' * 30)
+
+#6
+sum_val = 0
+for i in range(1,11,1):
+    sum_val = sum_val + i
+print(sum_val)
+print('=' * 30)
+
+#7
+print('=' * 30)
+
+#8
+num = 5
+result = 1
+while num > 0 :
+    result= result*num
+    num -= 1
+print(result)
+print('=' * 30)
+
+#9
+def greet() : 
+    print("Hello, Bioinformatics!")
+greet()
+print('=' * 30)
+ 
+#10
+def mySum(a,b):
+    print("%d +%d = %d" %(a, b, a+b))
+mySum(2,3)
+mySum(5,7)
+mySum(10,15)
+print('=' * 30)
+
+#11/12
+def Factorial():
+    num = int(input())
+    result = 1
+    while num > 0 :
+        result= result*num
+        num -= 1
+    return result
+result = Factorial()
+print(result)
+print('=' * 30)
+
+#13
+name = input()
+print("Hello %s." % name)
+
+

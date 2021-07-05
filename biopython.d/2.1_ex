@@ -1,0 +1,107 @@
+#! /usr/bin/env python
+# 21
+a = "Bio"
+b = "Information"
+print(a+b)
+print('=' * 30)
+
+#22
+Met = "ATG"
+Trp = "TGG"
+His = "CAT"
+seq = Met * 10 + Trp * 10 + His
+print(seq)
+print('=' * 30)
+
+#23
+seq = "AGTTTATAG"
+print(seq[5])
+print('=' * 30)
+
+#24
+seq = "AGTTTATAG"
+print(seq[3:6])
+print('=' *30)
+
+#25
+print(len(seq))
+print('=' *30)
+
+#26
+seq_1 = "ATGttATaG"
+print(seq_1.upper())
+print(seq_1.lower())
+print('=' *30)
+
+#27
+print(seq[::3])
+print('=' *30)
+
+#28
+for i in range(0,len(seq),3):
+    print(seq[i:i+3])
+print('=' * 30)
+
+#29
+print(seq[::-1])
+print('=' * 30)
+
+#30
+new_seq = ""
+for s in seq :
+    if s == "A" :
+        new_seq += "T"
+    elif s == "T" :
+        new_seq += "A"
+    elif s == "G" :
+        new_seq += "C"
+    elif s == "C" :
+        new_seq += "G"
+print(new_seq)
+print('=' * 30)
+
+#31
+revecomple_seq = ""
+reve_seq = seq[::-1]
+for r in reve_seq :
+    if r == "A" :
+        revecomple_seq += "T"
+    elif r == "T" :
+        revecomple_seq += "A"
+    elif r == "G" :
+        revecomple_seq += "C"
+    elif r == "C" :
+        revecomple_seq += "G"
+print(seq)
+print(revecomple_seq)
+print('=' * 30)
+
+#32
+print("C" in seq)
+print("T" in seq)
+print('=' * 30)
+
+#33
+motif = "TT"
+for m in range(len(seq)) :
+    if seq[m:m+2] == motif :
+        print(m)
+print('=' * 30)
+
+#34    
+print("A:", seq.count("A"))
+print("C:", seq.count("C"))
+print("G:", seq.count("G"))
+print("T:", seq.count("T"))
+print('=' * 30)
+
+#35
+print(seq.replace("T", "U"))
+print('=' * 30)
+
+#36
+sentence = "Welcome to the Bioinformatics World!"
+arr = sentence.split(" ")
+print(arr)
+print(len(arr))
+
