@@ -56,19 +56,29 @@ with open(file_name, 'r') as handle :
         else : 
             text = line.strip()  
             d_name[name] += text
-cg = 0
+
 def content(seq): 
+    cg = 0
     for i in seq :
-        length = len(i)
-        for s in i : 
-            if s == 'C' or s=='G':
-                cg += 1
-    return cg/length
+        if i == 'C' or i =='G':
+            cg += 1
+    length = len(seq)
+    gc = (cg/length)*100
+    return gc
+ 
+name =""
+rank = 0
+for title, seq in d_name.items():
+    r_seq = content(seq)
+    d_name[title] = r_seq
 
-l_name = d_name.values()
+for title, content in d_name.items():
+    if content > rank : 
+        rank = content
+        name = title
+    else : 
+        continue
+         
 
-k=l_name[3]
-print(k)
-#print(content(obj))
-#print(d_name.values())
-
+print(name)
+print(rank)
